@@ -10359,6 +10359,10 @@ html.route-index #carbon {
   margin-bottom: 1.5rem;
 }
 
+.bd-example.bd-is-clipped {
+  border-top-right-radius: 5px;
+}
+
 .bd-example + .highlight {
   border: 1px solid #ffdd57;
   border-radius: 0 0 3px 3px;
@@ -10367,14 +10371,6 @@ html.route-index #carbon {
 }
 
 .bd-example + .highlight:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.bd-example + .bd-highlight-clipped {
-  margin-top: -1.5rem;
-}
-
-.bd-example + .bd-highlight-clipped:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
@@ -10402,6 +10398,28 @@ html.route-index #carbon {
   background-color: whitesmoke;
 }
 
+.bd-snippet-code.bd-is-more.bd-is-more-clipped .highlight {
+  height: 2em;
+  overflow: hidden;
+}
+
+.bd-snippet-code.bd-is-more.bd-is-more-clipped .highlight pre {
+  overflow: hidden;
+}
+
+.bd-snippet-code.bd-is-more.bd-is-more-clipped .highlight .bd-show {
+  display: flex;
+}
+
+.bd-snippet.bd-is-horizontal {
+  border-radius: 5px;
+  border-top-left-radius: 0;
+}
+
+.bd-snippet.bd-is-horizontal .bd-snippet-code.bd-is-more.bd-is-more-clipped .highlight pre {
+  padding-top: 0.325rem;
+}
+
 .bd-snippet.bd-is-clipped .bd-snippet-code {
   overflow: auto;
 }
@@ -10409,6 +10427,8 @@ html.route-index #carbon {
 @media screen and (min-width: 1024px) {
   .bd-snippet.bd-is-vertical {
     align-items: stretch;
+    border-radius: 5px;
+    border-top-left-radius: 0;
     display: flex;
     justify-content: center;
   }
@@ -10420,6 +10440,7 @@ html.route-index #carbon {
   .bd-snippet.bd-is-vertical .bd-snippet-code .highlight,
   .bd-snippet.bd-is-vertical .bd-snippet-code .highlight pre {
     align-items: stretch;
+    border-radius: 0 5px 5px 0;
     display: flex;
     flex-direction: column;
   }
@@ -10550,51 +10571,37 @@ html.route-index #carbon {
   right: 45px;
 }
 
-@media screen and (min-width: 769px), print {
-  .highlight pre {
-    white-space: pre-wrap;
-  }
-}
-
-.bd-highlight-clipped .bd-show {
+.highlight .bd-show {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
-  background-image: linear-gradient(transparent, transparent 90%, black);
+  background-color: rgba(245, 245, 245, 0.7);
   border: none;
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   display: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   justify-content: center;
-  opacity: 0.7;
   width: 100%;
 }
 
-.bd-highlight-clipped .bd-show strong {
+.highlight .bd-show strong {
   color: currentColor;
   font-weight: 600;
 }
 
-.bd-highlight-clipped .bd-show:hover {
-  opacity: 0.8;
+.highlight .bd-show:hover {
+  background-color: rgba(255, 221, 87, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.bd-highlight-clipped .highlight.bd-is-clipped {
-  height: 4em;
-  overflow: hidden;
-}
-
-.bd-highlight-clipped .highlight.bd-is-clipped pre {
-  overflow: hidden;
-}
-
-.bd-highlight-clipped .highlight.bd-is-clipped .bd-show {
-  display: flex;
+@media screen and (min-width: 769px), print {
+  .highlight pre {
+    white-space: pre-wrap;
+  }
 }
 
 @media screen and (min-width: 769px), print {
@@ -10610,6 +10617,12 @@ html.route-index #carbon {
 
 .section.is-fullwidth {
   padding: 0 !important;
+}
+
+.section.is-fullwidth .bd-snippet {
+  border-left: none;
+  border-radius: 0;
+  border-right: none;
 }
 
 .section.is-fullwidth .bd-example {
