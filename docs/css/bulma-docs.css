@@ -10948,8 +10948,17 @@ html.route-index .hero.is-primary a.column:hover .title strong {
 }
 
 .Tweet-actions {
+<<<<<<< HEAD
   align-items: center;
   display: none;
+=======
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> Add love data
   margin-top: 8.4px;
 }
 
