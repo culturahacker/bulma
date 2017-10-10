@@ -113,16 +113,20 @@ document.addEventListener('DOMContentLoaded', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Add show code
 =======
 >>>>>>> Improve snippet
+=======
+>>>>>>> Fix rebase
       var $parent = $el.parentNode;
       if ($parent && $parent.classList.contains('bd-is-more')) {
         var showEl = '<button class="bd-show"><div><span class="icon"><i class="fa fa-code"></i></span> <strong>Show code</strong></div></button>';
         $el.insertAdjacentHTML('beforeend', showEl);
       } else if ($el.firstElementChild.scrollHeight > 480 && $el.firstElementChild.clientHeight <= 480) {
         $el.insertAdjacentHTML('beforeend', expandEl);
+<<<<<<< HEAD
 =======
       if ($el.firstElementChild.scrollHeight > 480 && $el.firstElementChild.clientHeight <= 480) {
         $el.insertAdjacentHTML('beforeend', expandEl);
@@ -161,6 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $el.insertAdjacentHTML('beforeend', expandEl);
 >>>>>>> Improve snippet
 >>>>>>> Improve snippet
+=======
+>>>>>>> Fix rebase
       }
 
       itemsProcessed++;
@@ -195,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Improve snippet
     var $highlightShows = getAll('.highlight .bd-show');
@@ -215,11 +222,14 @@ document.addEventListener('DOMContentLoaded', function () {
 >>>>>>> Add show code
 =======
 >>>>>>> Improve snippet
+=======
+>>>>>>> Fix rebase
     var $highlightShows = getAll('.highlight .bd-show');
 
     $highlightShows.forEach(function ($el) {
       $el.addEventListener('click', function () {
         $el.parentNode.parentNode.classList.remove('bd-is-more-clipped');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Improve snippet
@@ -235,6 +245,8 @@ document.addEventListener('DOMContentLoaded', function () {
 =======
 >>>>>>> Improve snippet
 >>>>>>> Improve snippet
+=======
+>>>>>>> Fix rebase
       });
     });
   }
